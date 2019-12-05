@@ -1,7 +1,17 @@
 const express = require('express');
 
 const router = express.Router();
+router.use(express.json())
 
+const validateUserId = require()
+
+const userDb = require('./userDb')
+const postDb = require('./posts/postDB')
+
+const errorMessage = (res, status, msg, error) => {
+  console.log(msg, error)
+  res.status(status).json({ errorMessage: msg })
+}
 router.post('/', (req, res) => {
   // do your magic!
 });
