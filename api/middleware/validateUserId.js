@@ -1,4 +1,3 @@
-  
 const db = require(`../../users/userDb`);
 
 const validateUserId = async (req, res, next) => {

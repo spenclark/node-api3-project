@@ -35,7 +35,6 @@ router.post("/:id/posts", [validateUserId, validatePost], (req, res) => {
     );
 });
 
-// returns list of users
 router.get("/", (req, res) => {
   // do your magic!
   userDb
@@ -46,13 +45,11 @@ router.get("/", (req, res) => {
     );
 });
 
-// user id 
 router.get("/:id", validateUserId, (req, res) => {
   // do your magic!
   res.status(200).json(req.user);
 });
 
-// user posts
 router.get("/:id/posts", validateUserId, (req, res) => {
   // do your magic!
   userDb
@@ -68,7 +65,6 @@ router.get("/:id/posts", validateUserId, (req, res) => {
     );
 });
 
-// delete user
 router.delete("/:id", validateUserId, (req, res) => {
   // do your magic!
   userDb
@@ -79,7 +75,6 @@ router.delete("/:id", validateUserId, (req, res) => {
     );
 });
 
-// changing user database 
 router.put("/:id", [validateUser, validateUserId], (req, res) => {
   // do your magic!
   userDb
